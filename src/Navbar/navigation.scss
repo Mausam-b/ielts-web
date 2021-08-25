@@ -1,0 +1,167 @@
+@import "../globals.scss";
+
+/*Desktop View*/
+.header {
+  height: 60px;
+  background: linear-gradient(#6616fc, #f394d3);
+  top:0;
+  left: 0;
+  right: 0;
+  padding: 0px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .nav__title {
+    display: flex;
+    left: 0;
+    top:0;
+  
+    p{
+      color: #fff;
+      font-size: 2.6em;
+      font-weight: 200; 
+      cursor: pointer;
+    }
+    span{
+      color: aqua;
+    }
+  }
+}
+
+.nav-items{
+  // padding-left: 25px;
+  display: grid;
+  grid-template-columns: repeat(9, auto);
+  // grid-gap: 2px;
+}
+
+.mobile-item{
+  display: none;
+}
+
+.nav__item{
+  margin-left: 2rem;
+}
+
+.nav__links{
+  color: $whiteColor;
+  font-size: 2.1em; 
+  padding: 2px 4px;
+  transition: all 0.5s;
+
+  &:hover{
+    color: aquamarine;
+    transition: all 0.5s ease-in-out;
+  }
+
+  span{
+    color: #f9f0f9;
+    padding: 0px 4px;
+
+    &:hover{
+      color: yellow;
+    }
+  }
+}
+
+.mobile-menu {
+  color: #4f0;
+  cursor: pointer;
+  display: none;
+}
+
+/* media queries */
+
+@media screen and (max-width: 991px) {
+
+  html{
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 0.3rem 0.8rem;
+  }
+}
+
+@media (max-width: 648px) {
+
+ /* Mobile View */
+  .mobile-menu {
+    display: block;
+  }
+  .menu-icon {
+    width: 45px;
+    height: 45px;
+    margin-top: 0.4em; 
+  }
+  
+  .logo{
+    .nav__title{
+      p {
+        font-size: 3em;
+        font-weight: 500;
+      }
+    }
+  }
+
+  // .navbar{
+  //   // position: absolute;
+  //   // top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   // border-top: .1rem solid #222;
+  //   // background: #333;
+  //   // clip-path: polygon(0 0, 100% 0, 0 0);
+  // }
+  
+  .nav-items{
+    display: flex;
+    width: 60%;
+    height: 89.5vh;
+    font-size: 1.3em;
+    position: absolute;
+    top: 65px;
+    left: -100%;
+    opacity: 0;
+    flex-direction: column;
+    list-style-type: none;
+    transition: all 0.6s ease;
+    // padding: 1.2em;
+    // right: 0;
+    // margin: 1.3rem;
+  }
+
+  .nav-items.active {
+    background: #333;
+    left: 0;
+    opacity: 1;
+    align-content: center;
+    padding-left: 0px;
+    transition: all 0.6s ease;
+    z-index: 1;
+  }
+ 
+  .nav__links {
+    display: table-row;
+    height: 10vw;
+    // align-items: center;
+    // justify-content: center;
+    // padding: 30px 0px;
+  }
+  
+}
+
+@media (max-width: 450px){
+
+  html{
+    font-size: 50%;
+  }
+}
+

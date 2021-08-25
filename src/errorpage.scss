@@ -1,0 +1,80 @@
+@import "./globals.scss";
+
+.err-page{
+    background: url('/images/bg.png');
+    width: 100%;
+    background-size: 578px;
+    background-position: center;
+}
+
+.page-not-found {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1 {
+        color: $primaryColor;
+        text-align: center;
+        justify-content: space-between;
+        font-size: 3rem;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+    }
+
+    p{
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+        text-align: center;
+        justify-content: center;
+    
+        .page-back{
+            font-size: 1.6rem;
+            color: aqua;  
+        }
+        .pnf_btn0{
+            background: #fff;
+            font-size: 1.6rem;
+            box-shadow: -3px 5px 28px -1px #40f;
+            margin-top: 1.6rem;
+            color: #709;
+            border-radius: 6px;
+            padding: 12px;
+            font-weight: 300;
+    
+    
+            &:hover{
+                color: $blackColor;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+
+
+/*==================== MEDIA QUERIES ====================*/
+
+/* For small devices */
+// @media screen and (min-width: 350px) {
+//     .err-page{
+//         background-size: 400px;
+//     }
+    
+//     h1{
+//         font-size: 1.6rem;
+//     }
+// }
+
+// /* For large devices */
+// @media screen and (min-width: 1024px) {
+
+//     .err-page{
+//         background-size: 578px;
+//     }
+    
+// }

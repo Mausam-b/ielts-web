@@ -1,10 +1,9 @@
 import React from 'react'
 
-function Navmenu() {
+export default function ScrollTop() {
     return (
         <div>
             
         </div>
-    )
+    );
 }
-export default Navmenu;

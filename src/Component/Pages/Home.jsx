@@ -1,12 +1,15 @@
 import React from 'react';
 import '../../main.scss';
+// import Topbar from '../Topbar';
+
 
 
 function Home() {
     return (
-        <div>
-            <h1>Hello world!</h1>
-        </div>
+        <>
+           {/* <Topbar /> */}
+            
+        </>
     );
 }
 export default Home;
